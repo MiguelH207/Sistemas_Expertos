@@ -14,7 +14,11 @@ ruta_imagenes = "imagenes_pokemon/"
 
 # Normalizar la base de datos
 def normalizar_texto(texto):
-    return unidecode.unidecode(texto.strip().lower())
+    # Verificar si el texto es una cadena; si no, devolverlo como está
+    if isinstance(texto, str):
+        return unidecode.unidecode(texto.strip().lower())
+    return texto  # Si es numérico, devolverlo sin modificar
+
 
 for columna in ["nombre", "tipo", "color", "forma", "nivel_evolucion"]:
     df_pokemon[columna] = df_pokemon[columna].apply(normalizar_texto)
