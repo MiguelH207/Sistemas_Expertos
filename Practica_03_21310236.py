@@ -5,6 +5,7 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import unidecode
 
+
 # Cargar la base de datos y normalizar el texto
 db_path = "base_datos_151_pokemon_con_generacion.csv"
 df_pokemon = pd.read_csv(db_path)
