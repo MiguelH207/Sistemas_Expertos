@@ -1,13 +1,72 @@
 {
     "posibles_sintomas": {
-        "vibraciones excesivas": ["ruido anormal", "vibraciones detectadas por sensores", "incremento en la desviación del corte"],
-        "desalineación del eje": ["movimiento no lineal", "errores en la precisión de cortes", "ruido mecánico anormal"],
-        "error en el control del eje": ["movimiento irregular", "ejes que no regresan a la posición inicial correctamente", "recalibración fallida"],
-        "falla en el sistema de enfriamiento": ["sobrecalentamiento del cabezal", "baja presión del refrigerante", "fugas visibles en las tuberías"],
-        "falla en el motor principal": ["ruido eléctrico", "variaciones en la velocidad", "paradas repentinas durante la operación"],
-        "problema en el plc": ["pérdida de conexión", "sistema no responde a comandos", "alarmas de comunicación"],
-        "herramientas desgastadas": ["baja calidad en los acabados de las piezas", "vibraciones durante el corte", "dificultad para cortar materiales"],
-        "falla en sensores de límite": ["lecturas erráticas de posición", "paradas inesperadas de la máquina", "alarmas de límites superados"],
-        "falla en el husillo": ["ruido metálico durante la operación", "variaciones en la velocidad del husillo", "sobrecalentamiento en la zona del husillo"]
+        "vibraciones excesivas": [
+            "ruido anormal",
+            "vibraciones detectadas por sensores",
+            "incremento en la desviación del corte"
+        ],
+        "desalineación del eje": [
+            "movimiento no lineal",
+            "errores en la precisión de cortes",
+            "ruido mecánico anormal"
+        ],
+        "error en el control del eje": [
+            "movimiento irregular",
+            "ejes que no regresan a la posición inicial correctamente",
+            "recalibración fallida"
+        ],
+        "falla en el sistema de enfriamiento": [
+            "sobrecalentamiento del cabezal",
+            "baja presión del refrigerante",
+            "fugas visibles en las tuberías"
+        ],
+        "falla en el motor principal": [
+            "ruido eléctrico",
+            "variaciones en la velocidad",
+            "paradas repentinas durante la operación"
+        ],
+        "problema en el plc": [
+            "pérdida de conexión",
+            "sistema no responde a comandos",
+            "alarmas de comunicación"
+        ],
+        "herramientas desgastadas": [
+            "baja calidad en los acabados de las piezas",
+            "vibraciones durante el corte",
+            "dificultad para cortar materiales"
+        ],
+        "falla en sensores de límite": [
+            "lecturas erráticas de posición",
+            "paradas inesperadas de la máquina",
+            "alarmas de límites superados"
+        ],
+        "falla en el husillo": [
+            "ruido metálico durante la operación",
+            "variaciones en la velocidad del husillo",
+            "sobrecalentamiento en la zona del husillo"
+        ],
+        "el operador no charcha": [
+            "nada funciona",
+            "no sale la produccion a tiempo",
+            "suena bien todo"
+        ],
+        "la maquina no esta conectada": [
+            "no prende",
+            "no hace ruido",
+            "no hace nada"
+        ]
+    },
+    "soluciones": {
+        "vibraciones excesivas": "Revise y ajuste los tornillos de las guías lineales.",
+        "desalineación del eje": "Contacte a un técnico para recalibrar los ejes.",
+        "error en el control del eje": "Verifique la configuración del controlador de motor y realice pruebas.",
+        "falla en el sistema de enfriamiento": "Revise el nivel de refrigerante y asegúrese de que no haya obstrucciones en las tuberías.",
+        "falla en el motor principal": "Es necesario reemplazar o reparar el motor. Contacte a soporte técnico.",
+        "problema en el plc": "Reinicie el sistema y asegúrese de que las conexiones del PLC estén correctas.",
+        "herramientas desgastadas": "Sustituya las herramientas por unas nuevas o afiladas.",
+        "falla en sensores de límite": "Limpie y verifique la conexión de los sensores.",
+        "falla en el husillo": "Es necesario un mantenimiento avanzado del husillo. Contacte a un especialista.",
+        "el operador no charcha": "capacitar nuevamente al chalan o cambiarlo",
+        "la maquina no esta conectada": "asegurese de conectar el interruptor principal a una linea trifasica  de 220V"
     }
 }
