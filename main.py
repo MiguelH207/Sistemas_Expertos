@@ -1,21 +1,17 @@
-from rules import evaluate_facts
+import json
+
+def cargar_datos_desde_json(ruta):
+    """Carga los datos de la base de conocimientos desde un archivo JSON."""
+    with open(ruta, 'r', encoding='utf-8') as archivo:  # Asegurar la codificación UTF-8
+        return json.load(archivo)
 
 def main():
     print("\n=== Sistema Experto: Diagnóstico de Fallas CNC ===")
 
-    # Obtener síntomas mediante preguntas de sí, no o no sé
+    # Cargar datos desde un archivo JSON
+    datos = cargar_datos_desde_json('base_conocimientos.json')
+    posibles_sintomas = datos['posibles_sintomas']
     respuestas = {}  # Diccionario para almacenar las respuestas del usuario a cada síntoma.
-    posibles_sintomas = {  # Diccionario con los diagnósticos y sus respectivos síntomas asociados.
-        "vibraciones excesivas": ["ruido anormal", "vibraciones detectadas por sensores", "incremento en la desviación del corte"],
-        "desalineación del eje": ["movimiento no lineal", "errores en la precisión de cortes", "ruido mecánico anormal"],
-        "error en el control del eje": ["movimiento irregular", "ejes que no regresan a la posición inicial correctamente", "recalibración fallida"],
-        "falla en el sistema de enfriamiento": ["sobrecalentamiento del cabezal", "baja presión del refrigerante", "fugas visibles en las tuberías"],
-        "falla en el motor principal": ["ruido eléctrico", "variaciones en la velocidad", "paradas repentinas durante la operación"],
-        "problema en el plc": ["pérdida de conexión", "sistema no responde a comandos", "alarmas de comunicación"],
-        "herramientas desgastadas": ["baja calidad en los acabados de las piezas", "vibraciones durante el corte", "dificultad para cortar materiales"],
-        "falla en sensores de límite": ["lecturas erráticas de posición", "paradas inesperadas de la máquina", "alarmas de límites superados"],
-        "falla en el husillo": ["ruido metálico durante la operación", "variaciones en la velocidad del husillo", "sobrecalentamiento en la zona del husillo"],
-    }
 
     print("\nPor favor, responda con 'si', 'no' o 'no sé' a las siguientes preguntas:")
     for diagnostico, sintomas in posibles_sintomas.items():
@@ -43,7 +39,7 @@ def main():
 
             # Penalización por 'no sé'
             if sintomas_no_se:
-                penalizacion_no_se = (len(sintomas_no_se) / sintomas_totales) * 5  # Penalización ajustada.
+                penalizacion_no_se = (len(sintomas_no_se) / sintomas_totales) * 10  # Penalización ajustada.
                 porcentaje -= penalizacion_no_se
 
             # Ajustar porcentaje para evitar valores negativos
