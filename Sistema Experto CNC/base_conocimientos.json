@@ -54,6 +54,13 @@
             "no prende",
             "no hace ruido",
             "no hace nada"
+        ],
+        "adwad": [
+            "se quemo"
+        ],
+        "fallando la pantalla": [
+            "se activan varias funciones de la maquina pero no tienes nada en la pantalla",
+            "no se ve nada en el monitor de la maquina"
         ]
     },
     "soluciones": {
@@ -67,6 +74,8 @@
         "falla en sensores de límite": "Limpie y verifique la conexión de los sensores.",
         "falla en el husillo": "Es necesario un mantenimiento avanzado del husillo. Contacte a un especialista.",
         "el operador no charcha": "capacitar nuevamente al chalan o cambiarlo",
-        "la maquina no esta conectada": "asegurese de conectar el interruptor principal a una linea trifasica  de 220V"
+        "la maquina no esta conectada": "asegurese de conectar el interruptor principal a una linea trifasica  de 220V",
+        "adwad": "no se puede",
+        "fallando la pantalla": "revisar su añimentacion a 110V y su puerto de display este bien conectado"
     }
 }
